@@ -1,69 +1,82 @@
-# Prerequisites
-*.d
+# ==========================================
+# CMake Build Outputs & Artifacts
+# ==========================================
+# Ignore standard and custom out-of-source build directories
+build/
+Build/
+build-*/
+out/
+bin/
 
-# Compiled Object files
-*.slo
-*.lo
+# Individual CMake system artifacts (in case of accidental in-source builds)
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+_deps/
+CMakeUserPresets.json
+
+# ==========================================
+# Compiled Binaries and Objects
+# ==========================================
+# Object files and libraries
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+*.a
+*.lib
 *.so
 *.dylib
 *.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
 # Executables
 *.exe
 *.out
 *.app
 
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
+# Debug and symbol files
+*.pdb
+*.ilk
+*.idb
 *.dwo
 
-# test output & cache
-Testing/
-.cache/
+# Precompiled headers
+*.gch
+*.pch
+
+# ==========================================
+# IDE and Tool Specifics
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Dependency Managers
+vcpkg_installed/
+.conan/
+
+# ==========================================
+# Operating System files
+# ==========================================
+.DS_Store
+Thumbs.db
